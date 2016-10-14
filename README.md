@@ -9,4 +9,6 @@ git clone <this-repo>
 cd <this-repo>
 # install project dependencies
 npm install
+"or"
+yarn
 ```
