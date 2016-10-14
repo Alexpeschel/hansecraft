@@ -1,0 +1,9 @@
+@mixin bg {
+  background:
+              linear-gradient(125deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.88) 15%, rgba(0,0,0,0.80) 50%, rgba(0,0,0,0.88) 100%),
+              rgba(235,229,255,0.5)
+              url(../img/bg-pattern.svg);
+  background-repeat:
+              no-repeat,
+              repeat;
+}
