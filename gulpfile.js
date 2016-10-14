@@ -26,7 +26,7 @@ gulp.task('compileSass', function() {
 });
 
 gulp.task('html', ['compileSass'], function() {
-  return gulp.src(options.src + 'index.html')
+  return gulp.src(options.src + '*.html')
       .pipe(useref())
       .pipe(gulpif('*.js', uglify()))
       .pipe(gulpif('*.css', minifyCss()))
@@ -49,6 +49,10 @@ gulp.task('sprites', function () {
 
 gulp.task('assets', function() {
   return gulp.src([options.src + "index.html",
+                   options.src + "handwerk.html",
+                   options.src + "textil.html",
+                   options.src + "kunst.html",
+                   options.src + "fonts/*",
                    options.src + "img/**/*"], { base: options.src})
               .pipe(gulp.dest(options.dist));
 });
