@@ -9,13 +9,33 @@
   transform: translate(-50%, -50%);
   &__item {
     box-sizing: border-box;
+    position: relative;
     display: inline-block;
     width: 33.333%;
     padding: 0 21px;
     text-align: center;
-  }
-  &__icon {
-    width: 100%;
-    max-width: 250px;
+    &:hover {
+      .mainNav__item__title {
+        display: block;
+      }
+    }
+    &__icon {
+      display: block;
+      width: 100%;
+      max-width: 250px;
+    }
+    &__title {
+      position: absolute;
+      left: 50%;
+      bottom: -50px;
+      display: none;
+      padding: 10px 0;
+      font-family: 'Antonio-Light';
+      font-size: 1rem;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      transform: translateX(-50%);
+    }
   }
 }

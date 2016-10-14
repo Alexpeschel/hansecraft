@@ -4,6 +4,24 @@ body {
 h1 {
   margin: 0; }
 
+@font-face {
+  font-family: 'Antonio-Regular';
+  src: url("../fonts/Antonio-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Antonio-Regular.woff") format("woff"), url("../fonts/Antonio-Regular.ttf") format("truetype"), url("../fonts/Antonio-Regular.svg#Antonio-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Antonio-Bold';
+  src: url("../fonts/Antonio-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Antonio-Bold.woff") format("woff"), url("../fonts/Antonio-Bold.ttf") format("truetype"), url("../fonts/Antonio-Bold.svg#Antonio-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Antonio-Light';
+  src: url("../fonts/Antonio-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Antonio-Light.woff") format("woff"), url("../fonts/Antonio-Light.ttf") format("truetype"), url("../fonts/Antonio-Light.svg#Antonio-Light") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 a {
   color: #000;
   text-decoration: none; }
@@ -14,7 +32,7 @@ body {
 
 body {
   background: linear-gradient(125deg, black 0%, rgba(0, 0, 0, 0.88) 15%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.88) 100%), rgba(235, 229, 255, 0.5) url(../img/bg-pattern.svg);
-  background-repeat: repeat; }
+  background-repeat: no-repeat, repeat; }
 
 .head__heading {
   max-height: 125px;
@@ -23,6 +41,9 @@ body {
 
 .main {
   min-height: calc(100% - 166px); }
+  .main--handwerk {
+    position: relative;
+    background: #000; }
 
 .mainNav {
   font-size: 0;
@@ -34,12 +55,66 @@ body {
   transform: translate(-50%, -50%); }
   .mainNav__item {
     box-sizing: border-box;
+    position: relative;
     display: inline-block;
     width: 33.333%;
     padding: 0 21px;
     text-align: center; }
-  .mainNav__icon {
-    width: 100%;
-    max-width: 250px; }
+    .mainNav__item:hover .mainNav__item__title {
+      display: block; }
+    .mainNav__item__icon {
+      display: block;
+      width: 100%;
+      max-width: 250px; }
+    .mainNav__item__title {
+      position: absolute;
+      left: 50%;
+      bottom: -50px;
+      display: none;
+      padding: 10px 0;
+      font-family: 'Antonio-Light';
+      font-size: 1rem;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      transform: translateX(-50%); }
+
+.sideNav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: none;
+  padding: 10px;
+  border: 2px solid #fff;
+  margin-left: 37px;
+  background: linear-gradient(125deg, black 0%, rgba(0, 0, 0, 0.88) 15%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.88) 100%), rgba(235, 229, 255, 0.5) url(../img/bg-pattern.svg);
+  background-repeat: no-repeat, repeat;
+  transform: translateY(-50%); }
+  .sideNav--open {
+    display: block; }
+  .sideNav__item {
+    display: block;
+    padding: 17px;
+    text-align: center; }
+    .sideNav__item__icon {
+      width: 86px; }
+    .sideNav__item__title {
+      display: none; }
+  .sideNav__trigger {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #000;
+    transform: translateY(-50%);
+    cursor: pointer; }
+    .sideNav__trigger__icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
 
 /*# sourceMappingURL=main.css.map */

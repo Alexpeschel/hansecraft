@@ -1,0 +1,52 @@
+.sideNav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: none;
+  padding: 10px;
+  border: 2px solid #fff;
+  margin-left: 37px;
+  background:
+      	      linear-gradient(125deg,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.88) 15%, rgba(0,0,0,0.80) 50%, rgba(0,0,0,0.88) 100%),
+              rgba(235,229,255,0.5)
+              url(../img/bg-pattern.svg);
+  background-repeat:
+              no-repeat,
+              repeat;
+  transform: translateY(-50%);
+  &--open {
+    display: block;
+  }
+  &__item {
+    display: block;
+    padding: 17px;
+    text-align: center;
+    &__icon {
+      width: 86px;
+    }
+    &__title {
+      display: none;
+    }
+  }
+  &__trigger {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #000;
+    transform: translateY(-50%);
+    cursor: pointer;
+    &--open {
+
+    }
+    &__icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
