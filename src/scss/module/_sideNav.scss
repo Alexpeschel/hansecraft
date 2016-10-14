@@ -40,13 +40,60 @@
     transform: translateY(-50%);
     cursor: pointer;
     &--open {
-
+      span {
+        &:nth-child(1) {
+          top: 18px;
+          width: 0%;
+          left: 50%;
+        }
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+        &:nth-child(4) {
+          top: 18px;
+          width: 0%;
+          left: 50%;
+        }
+      }
     }
     &__icon {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+
+      width: 18px;
+      height: 12px;
+
+      transform: translate(-50%, -50%) rotate(0deg);
+      transition: .5s ease-in-out;
+
+      cursor: pointer;
+
+      span {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: #fff;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+        &:nth-child(1) {
+          top: 0px;
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+          top: 5px;
+        }
+        &:nth-child(4) {
+          top: 10px;
+        }
+      }
     }
   }
 }
