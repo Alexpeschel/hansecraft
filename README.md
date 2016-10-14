@@ -1,5 +1,5 @@
-# Platz für was Neues
-This is the repo for the Schmidts Kater "Platz für was Neues" promotion page.
+# HanseCraft
+
 
 ## Quick Start
 ```
