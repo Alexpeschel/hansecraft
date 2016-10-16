@@ -6,6 +6,7 @@
   padding: 10px;
   border: 2px solid #fff;
   margin-left: 37px;
+  z-index: 999;
   @include bg;
   transform: translateY(-50%);
   &--open {
@@ -19,7 +20,7 @@
       width: 86px;
     }
     &__title {
-      display: none; 
+      display: none;
     }
   }
   &__trigger {
@@ -33,6 +34,7 @@
     background: #000;
     transform: translateY(-50%);
     cursor: pointer;
+    z-index: 999;
     &--open {
       span {
         &:nth-child(1) {
